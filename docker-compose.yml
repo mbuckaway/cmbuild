@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+    pythonbuild:
+        image: mbuckaway/python3.7:xenial
+        restart: "no"
+        container_name: builder_app
+        hostname: builder_app
+        volumes:
+            - build-data:/build
+volumes:
+    build-data:
+
